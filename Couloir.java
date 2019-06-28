@@ -25,6 +25,7 @@ public class Couloir
                 c = true;
             }
         }
+
     }
 
     public String getNumeroSequentiel()
@@ -39,7 +40,7 @@ public class Couloir
 
     public String toString()
     {
-        String x = "numeroSequentiel: " + numeroSequentiel + "\n";
+        String x = "numeroSequentiel: " + numeroSequentiel + "\nL'occupation :\n";
 
         for (int i=0;i<24;i++)
         {
