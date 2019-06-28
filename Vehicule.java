@@ -18,7 +18,7 @@ public class Vehicule extends MoyenTransport
 
     public String toString()
     {
-        return super.toString() + String.format("\nmotif d'utilisation: %s",motifUtilisation);
+        return super.toString() + String.format("\nmotif d'utilisation: %s\n",motifUtilisation);
     }
 
     public Boolean checkTypeMoyen(String type)

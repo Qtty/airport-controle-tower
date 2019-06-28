@@ -21,7 +21,7 @@ public class Bus extends MoyenTransport{
     }   
 
     public String toString(){
-        return super.toString() + String.format("\nNombre Siege %d", nombreSiege); 
+        return super.toString() + String.format("\nNombre Siege %d\n", nombreSiege); 
     }
 
       
