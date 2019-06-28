@@ -52,9 +52,9 @@ public class Avion extends MoyenTransport{
     public static void main(String[] args)
     {
         Avion a = new Avion(1486,"ruski","bratan",TypeMoyen.AVI,leType.AIRBUS, 500, 100);
-            MoyenTransport b = new MoyenTransport(71486,"171732021451","ruski","bratan",TypeMoyen.CAM);
+        MoyenTransport b = new MoyenTransport(71486,"171732021451","ruski","bratan",TypeMoyen.CAM);
         Vehicule c = new Vehicule(14856,"1717320214851","ruski","bratan",TypeMoyen.VOI,"fun");
-                Avion d = new Avion(14860,"ruski","bratan",TypeMoyen.AVI,leType.ATR, 500, 100);
+        Avion d = new Avion(14860,"ruski","bratan",TypeMoyen.AVI,leType.ATR, 500, 100);
 
 
         System.out.println(a + "\n"  + b+ "\n" + c + "\n" + d);
