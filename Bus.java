@@ -10,6 +10,7 @@ public class Bus extends MoyenTransport{
     public Bus(long numeroSerie, String matricule, String modele, String entreprise,TypeMoyen type, int nombreSiege){
 
         super(numeroSerie,matricule,modele,entreprise,type);
+        this.numeroSequentiel = String.format("%s%03d",TypeMoyen.BUS,n);
         this.nombreSiege = nombreSiege;
         n++;
      
@@ -26,6 +27,7 @@ public class Bus extends MoyenTransport{
       
     public static void main(String[] args)
     {
+        MoyenTransport b = new MoyenTransport(1486,"171732021451","ruski","bratan",TypeMoyen.CAM);
         Bus a = new Bus(1486,"171732021451","ruski","bratan",TypeMoyen.BUS, 50);
 
         System.out.println(a);

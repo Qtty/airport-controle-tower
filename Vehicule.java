@@ -11,6 +11,7 @@ public class Vehicule extends MoyenTransport
     public Vehicule(long numeroSerie, String matricule, String modele, String entreprise, TypeMoyen type,String motifUtilisation)
     {
         super(numeroSerie, matricule, modele, entreprise, type);
+        this.numeroSequentiel = String.format("%s%03d",type,n);
         this.motifUtilisation = motifUtilisation;
         n++;
     }
@@ -25,6 +26,7 @@ public class Vehicule extends MoyenTransport
         Boolean c = super.checkTypeMoyen(type);
 
         if (c && (type.equals(TypeMoyen.VOI.toString()) || type.equals(TypeMoyen.CAM.toString()))) return true;
+        System.out.println("[-] type doit etre VOI ou CAM");
         return false;
     }
 
@@ -35,9 +37,11 @@ public class Vehicule extends MoyenTransport
     
     public static void main(String[] args)
     {
+        
+        MoyenTransport b = new MoyenTransport(1486,"171732021451","ruski","bratan",TypeMoyen.CAM);
         Vehicule a = new Vehicule(1486,"171732021451","ruski","bratan",TypeMoyen.CAM,"fun");
 
-        System.out.println(a);
+        System.out.println(a + "\n" + b);
 
     }
 }

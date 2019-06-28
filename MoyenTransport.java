@@ -56,7 +56,7 @@ public class MoyenTransport
         }
         catch(IllegalArgumentException ex)
         {
-            System.out.println("type moyen invalid");
+            System.out.println("[-] type moyen invalid");
             return false;
         }
 
