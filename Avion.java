@@ -49,7 +49,7 @@ public class Avion extends MoyenTransport{
         return true;
     }
 
-    public static void main(String[] args)
+   /* public static void main(String[] args)
     {
         Avion a = new Avion(1486,"ruski","bratan",TypeMoyen.AVI,leType.AIRBUS, 500, 100);
         MoyenTransport b = new MoyenTransport(71486,"171732021451","ruski","bratan",TypeMoyen.CAM);
@@ -59,7 +59,7 @@ public class Avion extends MoyenTransport{
 
         System.out.println(a + "\n"  + b+ "\n" + c + "\n" + d);
 
-    }   
+    }   */
 
 }
 

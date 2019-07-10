@@ -1,5 +1,7 @@
 package com.usthb.modeles;
 
+import java.util.Scanner;
+
 public class MoyenTransport
 {
     private static int n = 0;
@@ -17,6 +19,8 @@ public class MoyenTransport
             
             
     }
+
+   
 
     public long getNumeroSerie()
     {
@@ -62,15 +66,19 @@ public class MoyenTransport
 
         return true;
     }
+
+    public static TypeMoyen getType(String type){
+        return TypeMoyen.valueOf(type);
+    }
     
-    public static void main(String[] args)
+    /*public static void main(String[] args)
     {
         MoyenTransport a = new MoyenTransport(1486,"171732021451","ruski","bratan",TypeMoyen.CAM);
 
         System.out.println(a);
 
-    }
-
+    }*/
+   
 }
 
 enum TypeMoyen

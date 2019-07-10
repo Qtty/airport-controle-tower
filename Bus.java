@@ -25,7 +25,7 @@ public class Bus extends MoyenTransport{
     }
 
       
-    public static void main(String[] args)
+   /* public static void main(String[] args)
     {
         MoyenTransport b = new MoyenTransport(1486,"171732021451","ruski","bratan",TypeMoyen.CAM);
         Bus a = new Bus(1486,"171732021451","ruski","bratan",TypeMoyen.BUS, 50);
@@ -34,5 +34,5 @@ public class Bus extends MoyenTransport{
 
     }
 
-
+*/
 }  

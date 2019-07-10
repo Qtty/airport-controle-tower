@@ -35,7 +35,7 @@ public class Vehicule extends MoyenTransport
         return motifUtilisation;
     }
     
-    public static void main(String[] args)
+    /*public static void main(String[] args)
     {
         
         MoyenTransport b = new MoyenTransport(1486,"171732021451","ruski","bratan",TypeMoyen.CAM);
@@ -43,5 +43,5 @@ public class Vehicule extends MoyenTransport
 
         System.out.println(a + "\n" + b);
 
-    }
+    }*/
 }
