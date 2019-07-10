@@ -8,22 +8,9 @@ public class Couloir
 
     public Couloir()
     {
-        Scanner sc = new Scanner(System.in);
-        int tmp = 0;
-        Boolean c = true;
         for (int i=0;i<24;i++)
         {
-            for (int j=0;j<60;j++)
-            {
-                while (c)
-                {
-                    System.out.println(String.format("saisie l'occupation pour le moment %02d:%02d(1/0)",i,j));
-                    tmp = sc.nextInt();
-                    if (tmp == 1 || tmp == 0) c = false;
-                }
-                occupation[i][j] = tmp;
-                c = true;
-            }
+            for (int j=0;j<60;j++) occupation[i][j] = 0;
         }
 
     }
@@ -38,6 +25,27 @@ public class Couloir
         return occupation;
     }
 
+    public void setOccupation()
+    {
+        Scanner sc = new Scanner(System.in);
+        int t,x,y,c;
+
+        System.out.println("combien de moments a modifier?");
+        t = sc.nextInt();
+        sc.nextLine();
+        for (int i=0;i<t;i++)
+        {
+            System.out.println("saisie l'heure");
+            x = sc.nextInt();
+            System.out.println("saisie la minute");
+            y = sc.nextInt();
+            System.out.println("saisie l'occupation(1/0)");
+            c = sc.nextInt();
+            occupation[x][y] = c;
+        }
+
+    }
+
     public String toString()
     {
         String x = "numeroSequentiel: " + numeroSequentiel + "\nL'occupation :\n";
@@ -46,7 +54,7 @@ public class Couloir
         {
             for (int j=0;j<60;j++)
             {
-                x += occupation[i][j] + '\t';
+                x += String.format("%d ",occupation[i][j]);
             }
             x += "\n";
         }

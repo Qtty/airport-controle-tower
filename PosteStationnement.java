@@ -27,7 +27,7 @@ public class PosteStationnement
         return auContact;
     }
 
-    public String numeroSequentiel()
+    public String getNumeroSequentiel()
     {
         return numeroSequentiel;
     }
@@ -43,6 +43,21 @@ public class PosteStationnement
         return String.format("numero sequentiel: %s\nau contact: %s\nposition: %s",numeroSequentiel,auContact,getPosition());
     }
 
+    public static Boolean checkType(String type)
+    {
+        try
+        {
+            Type.valueOf(type);
+        }
+        catch(IllegalArgumentException ex)
+        {
+            System.out.println("[-] type invalid");
+            return false;
+        }
+
+        return true;
+    }
+    
     public static void main(String[] args)
     {
         int[] x = {0,1};

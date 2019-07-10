@@ -1,3 +1,4 @@
+package com.usthb.modeles;
 
 public enum TypeMoyen
 {

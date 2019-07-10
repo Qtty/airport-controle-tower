@@ -7,9 +7,9 @@ public class Piste extends Couloir
     private static int n = 0;
     private int longeur;
     private float pente;
-    private Orientation orientation;
+    private Orientations orientation;
 
-    public Piste(int longeur,float pente,Orientation orientation)
+    public Piste(int longeur,float pente,Orientations orientation)
     {
         super();
         numeroSequentiel = String.format("P%03d",n);
@@ -29,7 +29,7 @@ public class Piste extends Couloir
         return pente;
     }
 
-    public Orientation getOrientation()
+    public Orientations getOrientation()
     {
         return orientation;
     }
@@ -49,11 +49,11 @@ public class Piste extends Couloir
 
         try
         {
-            Orientation.valueOf(orien);
+            Orientations.valueOf(orien);
         }
         catch(IllegalArgumentException ex)
         {
-            System.out.println("[-] Orientation invalid");
+            System.out.println("[-] Orientations invalid");
             return false;
         }
 
@@ -64,25 +64,5 @@ public class Piste extends Couloir
     {
         Piste p;
         Piste.checkInput(3999, "EST");
-    }
-}
-
-enum Orientation
-{
-    NORD("NORD"),
-    SUD("SUD"),
-    EST("EST"),
-    OUEST("OUEST");
-
-    private String orien = "";
-
-    Orientation(String orien)
-    {
-        this.orien = orien;
-    }
-
-    public String toString()
-    {
-        return orien;
     }
 }

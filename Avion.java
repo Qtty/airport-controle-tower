@@ -1,16 +1,14 @@
 package com.usthb.modeles;
-import com.usthb.modeles.MoyenTransport;
-import com.usthb.modeles.TypeMoyen;
 
 public class Avion extends MoyenTransport{
 
     private int carburant, nombreVoyageurs;
     private static int n = 0;
-    private leType typeAvion;
+    private TypeAvion typeAvion;
 
-    public Avion(long numeroSerie, String modele, String entreprise,TypeMoyen type ,leType typeAvion,int carburant, int nombreVoyageurs){
+    public Avion(long numeroSerie, String modele, String entreprise ,TypeAvion typeAvion,int carburant, int nombreVoyageurs){
         
-        super(numeroSerie,"",modele,entreprise,type);
+        super(numeroSerie,"",modele,entreprise,TypeMoyen.AVI);
         this.carburant = carburant;
         this.typeAvion = typeAvion;
         this.nombreVoyageurs = nombreVoyageurs;
@@ -35,10 +33,10 @@ public class Avion extends MoyenTransport{
         return super.toString() + String.format("\nType: %s\nCarburant: %d\nNombre Voyageurs: %d\n",typeAvion,carburant,nombreVoyageurs);
     }
 
-    public Boolean checkTypeMoyen(String type){
+    public static Boolean checkType(String type){
         try
         {
-            leType.valueOf(type);
+            TypeAvion.valueOf(type);
         }
         catch(IllegalArgumentException ex)
         {
@@ -51,10 +49,10 @@ public class Avion extends MoyenTransport{
 
    /* public static void main(String[] args)
     {
-        Avion a = new Avion(1486,"ruski","bratan",TypeMoyen.AVI,leType.AIRBUS, 500, 100);
+        Avion a = new Avion(1486,"ruski","bratan",TypeMoyen.AVI,TypeAvion.AIRBUS, 500, 100);
         MoyenTransport b = new MoyenTransport(71486,"171732021451","ruski","bratan",TypeMoyen.CAM);
         Vehicule c = new Vehicule(14856,"1717320214851","ruski","bratan",TypeMoyen.VOI,"fun");
-        Avion d = new Avion(14860,"ruski","bratan",TypeMoyen.AVI,leType.ATR, 500, 100);
+        Avion d = new Avion(14860,"ruski","bratan",TypeMoyen.AVI,TypeAvion.ATR, 500, 100);
 
 
         System.out.println(a + "\n"  + b+ "\n" + c + "\n" + d);
@@ -63,19 +61,3 @@ public class Avion extends MoyenTransport{
 
 }
 
-enum leType{
-    
-    AIRBUS("AIRBUS"),
-    BOEING("BOEING"),
-    ATR("ATR");
-
-    private String type  = "";
-
-    leType(String type){
-        this.type = type;
-    }
-
-    public String toString(){
-        return type; 
-    }
-}
