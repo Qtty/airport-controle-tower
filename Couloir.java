@@ -1,10 +1,12 @@
 package com.usthb.modeles;
+
 import java.util.Scanner;
 
 public class Couloir
 {
     protected String numeroSequentiel;
     protected int[][] occupation = new int[24][60];
+    protected MoyenTransport moyen = null;
 
     public Couloir()
     {
@@ -23,6 +25,16 @@ public class Couloir
     public int[][] getOccupation()
     {
         return occupation;
+    }
+
+    public MoyenTransport getMoyen()
+    {
+        return moyen;
+    }
+
+    public void setMoyen(MoyenTransport moyen)
+    {
+        this.moyen = moyen;
     }
 
     public void setOccupation()
@@ -61,8 +73,4 @@ public class Couloir
         return x;
     }
 
-    public static void main(String[] args)
-    {
-        Couloir a = new Couloir();
-    }
 }

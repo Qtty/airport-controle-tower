@@ -1,8 +1,5 @@
 package com.usthb.modeles;
 
-import com.usthb.modeles.MoyenTransport;
-import com.usthb.modeles.TypeMoyen;
-
 public class Vehicule extends MoyenTransport
 {
     private static int n = 0;
@@ -10,7 +7,7 @@ public class Vehicule extends MoyenTransport
 
     public Vehicule(long numeroSerie, String matricule, String modele, String entreprise, TypeMoyen type,String motifUtilisation)
     {
-        super(numeroSerie, matricule, modele, entreprise, type);
+        super(numeroSerie, matricule, modele, entreprise);
         this.numeroSequentiel = String.format("%s%03d",type,n);
         this.motifUtilisation = motifUtilisation;
         n++;
@@ -34,14 +31,5 @@ public class Vehicule extends MoyenTransport
     {
         return motifUtilisation;
     }
-    
-    /*public static void main(String[] args)
-    {
-        
-        MoyenTransport b = new MoyenTransport(1486,"171732021451","ruski","bratan",TypeMoyen.CAM);
-        Vehicule a = new Vehicule(1486,"171732021451","ruski","bratan",TypeMoyen.CAM,"fun");
 
-        System.out.println(a + "\n" + b);
-
-    }*/
 }

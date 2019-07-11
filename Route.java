@@ -1,8 +1,5 @@
 package com.usthb.modeles;
 
-import com.usthb.modeles.MoyenTransport;
-import com.usthb.modeles.TypeMoyen;
-
 public class Route extends Couloir {
     
     public static int n = 0;

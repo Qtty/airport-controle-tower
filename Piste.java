@@ -1,7 +1,5 @@
 package com.usthb.modeles;
 
-import com.usthb.modeles.Couloir;
-
 public class Piste extends Couloir
 {
     private static int n = 0;
@@ -58,11 +56,5 @@ public class Piste extends Couloir
         }
 
         return true;
-    }
-
-    public static void main(String[] args)
-    {
-        Piste p;
-        Piste.checkInput(3999, "EST");
     }
 }

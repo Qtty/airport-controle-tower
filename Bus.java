@@ -1,6 +1,4 @@
 package com.usthb.modeles;
-import com.usthb.modeles.MoyenTransport;
-import com.usthb.modeles.TypeMoyen;
 
 public class Bus extends MoyenTransport{
 
@@ -9,7 +7,7 @@ public class Bus extends MoyenTransport{
 
     public Bus(long numeroSerie, String matricule, String modele, String entreprise,TypeMoyen type, int nombreSiege){
 
-        super(numeroSerie,matricule,modele,entreprise,type);
+        super(numeroSerie,matricule,modele,entreprise);
         this.numeroSequentiel = String.format("%s%03d",TypeMoyen.BUS,n);
         this.nombreSiege = nombreSiege;
         n++;

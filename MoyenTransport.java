@@ -1,27 +1,18 @@
 package com.usthb.modeles;
 
-import java.util.Scanner;
-import com.usthb.modeles.TypeMoyen;
-
 public class MoyenTransport
 {
-    private static int n = 0;
     protected long numeroSerie;
     protected String matricule,modele,entreprise,numeroSequentiel;
+    protected Couloir couloir = null;
 
-    public MoyenTransport(long numeroSerie,String matricule,String modele,String entreprise,TypeMoyen type)
+    public MoyenTransport(long numeroSerie,String matricule,String modele,String entreprise)
     {
             this.numeroSerie = numeroSerie;
             this.matricule = matricule;
             this.modele = modele;
-            this.entreprise = entreprise;
-            numeroSequentiel = String.format("%s%03d",type,n);
-            n++;
-            
-            
+            this.entreprise = entreprise;      
     }
-
-   
 
     public long getNumeroSerie()
     {
@@ -72,12 +63,14 @@ public class MoyenTransport
         return TypeMoyen.valueOf(type);
     }
     
-    /*public static void main(String[] args)
+    public Couloir getCouloir()
     {
-        MoyenTransport a = new MoyenTransport(1486,"171732021451","ruski","bratan",TypeMoyen.CAM);
+        return couloir;
+    }
 
-        System.out.println(a);
-
-    }*/
+    public void setCouloir(Couloir couloir)
+    {
+        this.couloir = couloir;
+    }
    
 }
