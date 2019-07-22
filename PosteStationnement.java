@@ -1,12 +1,16 @@
 package com.usthb.modeles;
 
+//classe de poste de stationnement
 public class PosteStationnement
 {
+    //variables de la classe
     private static int n = 0;
     private Boolean auContact;
     private String numeroSequentiel;
     private int[] position;
 
+
+    //constructeur de la classe
     public PosteStationnement(Type type,int[] position)
     {
         auContact = true;
@@ -15,6 +19,7 @@ public class PosteStationnement
         n++;
     }
 
+    //second constructeur de la classe (surchargement)
     public PosteStationnement(Type type)
     {
         auContact = false;
@@ -22,6 +27,7 @@ public class PosteStationnement
         n++;
     }
 
+    //getters permettant de retourner les valeurs des variables de la classe 
     public Boolean getAuContact()
     {
         return auContact;
@@ -38,11 +44,14 @@ public class PosteStationnement
         return "eloigne";
     }
 
+
+    //redéfinition de la méthode toString
     public String toString()
     {
         return String.format("numero sequentiel: %s\nau contact: %s\nposition: %s",numeroSequentiel,auContact,getPosition());
     }
 
+    //méthode qui permet de vérifier si une chaine de charactere est un type de stationnement valide
     public static Boolean checkType(String type)
     {
         try
@@ -57,16 +66,10 @@ public class PosteStationnement
 
         return true;
     }
-    
-    public static void main(String[] args)
-    {
-        int[] x = {0,1};
-        PosteStationnement p = new PosteStationnement(Type.P);
-
-        System.out.println(p);
-    }
 }
 
+
+//énumération contenant les type de stationnement
 enum Type
 {
     P("P"),
@@ -74,11 +77,13 @@ enum Type
 
     private String type = "";
 
+    //constructeur de l'énumération
     Type(String type)
     {
         this.type = type;
     }
 
+    //redéfinition de la méthode toString
     public String toString()
     {
         return type;

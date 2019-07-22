@@ -1,5 +1,6 @@
 package com.usthb.modeles;
 
+//énumération contenant les orientations
 public enum Orientations
 {
     NORD("NORD"),
@@ -9,11 +10,13 @@ public enum Orientations
 
     private String orien = "";
 
+    //constructeur de l'énumération
     Orientations(String orien)
     {
         this.orien = orien;
     }
 
+    //redéfinition de la méthode toString
     public String toString()
     {
         return orien;

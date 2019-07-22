@@ -1,9 +1,14 @@
 package com.usthb.modeles;
 
+//classe bus
+
 public class Bus extends MoyenTransport{
 
+    //variables propre au bus
     private static int n = 0;
     private int nombreSiege;
+
+    //On appelle le constructeur de la super classe et on rajoute les attributs de la sous classe
 
     public Bus(long numeroSerie, String matricule, String modele, String entreprise,TypeMoyen type, int nombreSiege){
 
@@ -13,24 +18,16 @@ public class Bus extends MoyenTransport{
         n++;
      
     }
-
+    
+    
+    //getter de l'attribut de la classe
     public int getNombreSiege(){
         return nombreSiege;
     }   
-
+    
+    
+    // redéfinition de la méthode toString pour complementer la classe bus 
     public String toString(){
-        return super.toString() + String.format("\nNombre Siege %d\n", nombreSiege); 
+        return super.toString() + String.format("\nNombre de siege: %d\n", nombreSiege); 
     }
-
-      
-   /* public static void main(String[] args)
-    {
-        MoyenTransport b = new MoyenTransport(1486,"171732021451","ruski","bratan",TypeMoyen.CAM);
-        Bus a = new Bus(1486,"171732021451","ruski","bratan",TypeMoyen.BUS, 50);
-
-        System.out.println(a);
-
-    }
-
-*/
 }  
